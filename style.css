@@ -12,6 +12,7 @@ a {
   text-decoration: none;
 }
 
+/* Header Styles */
 .header {
   position: fixed;
   height: 80px;
@@ -66,34 +67,90 @@ a {
   transform: scale(0.98);
 }
 
-/* Home */
-.home {
+/* Hero Section Styles */
+.hero {
   position: relative;
-  height: 100vh;
-  width: 100%;
-  background-image: url("bg.jpg");
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 80px 60px;
+  min-height: 100vh;
+  background-image: url("image/heroimage.jpeg");
   background-size: cover;
   background-position: center;
+  z-index: 1;
 }
 
-.home::before {
+.hero::before {
   content: "";
   position: absolute;
-  height: 100%;
+  top: 0;
+  left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 100;
-  opacity: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: -1;
+}
+
+.hero-text {
+  max-width: 500px;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.hero button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: flex;
+  gap: 40px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  text-align: center;
+  color: #333;
+}
+
+.hero-image img {
+  max-width: 500px;
+  height: auto;
+}
+
+/* Form Styles */
+.home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
   pointer-events: none;
-  transition: all 0.5s ease-out;
 }
 
-.home.show::before {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Form */
 .form_container {
   position: fixed;
   max-width: 320px;
@@ -236,4 +293,23 @@ a {
   font-size: 12px;
   text-align: center;
   margin-top: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 120px 20px 40px;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+    align-self: center;
+  }
+  
+  .features {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
