@@ -1,0 +1,126 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+    background-attachment: fixed;
+    color: white;
+  }
+  
+  h2 {
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px #00000044;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    max-width: 850px;
+    margin: auto;
+  }
+  
+  .section {
+    margin-bottom: 25px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="number"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #ffffff66;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="date"]:focus,
+  input[type="number"]:focus,
+  input[type="tel"]:focus {
+    background-color: rgba(255, 255, 255, 0.4);
+    outline: none;
+  }
+  
+  input::placeholder {
+    color: #eee;
+  }
+  
+  .checkbox-group {
+    margin-top: 6px;
+  }
+  
+  .checkbox-group label {
+    font-weight: normal;
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    transform: scale(1.2);
+    margin-right: 8px;
+    accent-color: #ffffff;
+  }
+  
+  hr {
+    border: 1px solid #ffffff33;
+    margin: 40px 0;
+  }
+  
+  .documents label {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .signature-section {
+    margin-top: 30px;
+  }
+  
+  h3 {
+    color: white;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 8px;
+  }
+  
+  .submit-section {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  button {
+    background-color: #ffffff;
+    color: #3a7bd5;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
