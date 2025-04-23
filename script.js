@@ -1,41 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Get all elements
-    const displayButton = document.getElementById('displayButton');
-    const nameInput = document.getElementById('nameInput');
-    const ageInput = document.getElementById('ageInput');
-    const outputBox = document.getElementById('outputBox');
+document.getElementById("displayButton").addEventListener("click", function () {
+    const name = document.getElementById("nameInput").value.trim();
+    const age = document.getElementById("ageInput").value.trim();
+    const outputBox = document.getElementById("outputBox");
 
-    // Add click event listener
-    displayButton.addEventListener('click', function() {
-        // Get values
-        const name = nameInput.value.trim();
-        const age = ageInput.value.trim();
+    // Regex to allow only letters and spaces
+    const nameRegex = /^[A-Za-z\s]+$/;
 
-        // Validate inputs
-        if (!name) {
-            showError("Please enter your name");
-            return;
-        }
-
-        if (!age) {
-            showError("Please enter your age");
-            return;
-        }
-
-        if (isNaN(age) || age <= 0) {
-            showError("Please enter a valid positive number for age");
-            return;
-        }
-
-        // Show success message
-        outputBox.textContent = `${name}, your age is ${age}`;
-        outputBox.style.backgroundColor = "#e8f5e9";
-        outputBox.style.color = "#2e7d32";
-    });
-
-    function showError(message) {
-        outputBox.textContent = message;
-        outputBox.style.backgroundColor = "#ffebee";
-        outputBox.style.color = "#c62828";
+    // Name validation
+    if (!nameRegex.test(name)) {
+        outputBox.textContent = "Invalid name. Only alphabets and spaces are allowed.";
+        outputBox.style.color = "red";
+        return;
     }
+
+    // Age validation
+    if (age === "" || isNaN(age) || age <= 0) {
+        outputBox.textContent = "Please enter a valid age.";
+        outputBox.style.color = "red";
+        return;
+    }
+
+    // Display result
+    outputBox.textContent = `Hello ${name}, you are ${age} years old.`;
+    outputBox.style.color = "green";
 });
